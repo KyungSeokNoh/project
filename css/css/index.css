@@ -1,0 +1,1538 @@
+@charset "UTF-8";
+
+html,body{}
+
+.warp {}
+
+/* header 영역 */
+
+#header {
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 90;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0   0   5px rgba(0, 0, 0, 0.8);
+}
+
+.head_inner {
+    max-width: 1200px;
+    width: 100%;
+    height: 150px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.name{
+    width: 233px;
+    height: 53px;
+}
+
+.name a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/상호명.png");
+    /* background-image: url("../img/sashimi-1.png"); */
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.nav {
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu>li {
+    width: 150px;
+    flex: 1 1 200px;
+    position: relative;
+}
+
+.menu>li>a {
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #add8e6;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    font-family: 'blackworld' !important;
+}
+
+.menu>li:hover>a {
+    background-color: lightskyblue;
+    color: blue;
+    transform: scale(1.01);
+}
+
+.menu>li>a:hover {
+    text-shadow: 0 0 5px yellow, 0 0 10px red, 0 0 15px white;
+
+}
+
+.sub {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: 60;
+    display: none;
+}
+
+.sub li {}
+
+.sub li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+}
+
+.sub li a:hover {
+    background-color: rgba(151, 223, 189 , 0.5);
+    text-decoration: underline;
+    /* transform: scale(1.1); */
+}
+
+.sub_bg{
+    width: 1200px;
+    height: 200px;
+    background-color: rgba(158, 219, 158, 0.5);
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+    z-index: 59;
+    /* border: 1px solid red; */
+}
+
+.m_nav{
+    /* display: none; */
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.m_nav.on{
+    left: 0;
+}
+.m_menu{
+
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    border: 1px solid red;
+}
+.m_menu>li{
+    background-color: #add8e6;
+    position: relative;
+    /* margin-top: 30px; */
+}
+.m_menu>li>a{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+}
+
+.m_menu>li:hover>a{
+    color: blue;
+    background-color: rgb(151, 223, 189);
+    text-shadow: 0 0 5px yellow, 0 0 10px red, 0 0 15px white;
+}
+.m_sub{
+    width: 100%;
+    display: none;
+    background-color: rgba(151, 223, 189 , 0.5);
+}
+.m_sub li{}
+.m_sub li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+}
+
+.m_nav .m_menu>li>.m_sub li a:hover{
+    text-decoration: underline;
+}
+
+/* container 영역 */
+
+#container {
+    width: 100%;
+    /* height: 950px; */
+    /* overflow: hidden; */
+    position: relative;
+    /* border: 1px solid orange; */
+}
+
+.img_slide {
+    max-width: 1920px;
+    width: 100%;
+    height: 950px;
+    margin: 0 auto;
+    
+}
+
+.slide{}
+
+.slide li {}
+
+.slide li a {    
+    width: 100%;
+    height: 950px;
+}
+
+/* information 영역 */
+
+.information{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(235, 235, 235, 0.5);
+}
+
+.information h2{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "BusanBada" ;
+}
+
+.information h2::before{
+    content: "★";
+    color: yellow;
+    font-family: "돋움";
+}
+
+/* img_title 영역 */
+
+.img_title{
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid orange; */
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.img_title section{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.sec_1{}
+
+.img_title a{
+    width: 40%;
+    height: 350px;
+    /* border: 1px solid red; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    text-indent: -9999px;
+    /* margin-top: 40px; */
+}
+
+.img_title ul{
+    width: 50%;
+    margin: 40px;
+    /* border: 1px solid blue; */
+}
+
+.span_h{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    color: white;
+    margin-bottom: 40px;
+    border-bottom: 5px double #f4f4f4;
+    text-shadow: 0 0 5px white , 0 0 10px red, 0 0 15px lightcyan;
+}
+
+.span_t{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 16px;
+    font-family: 'blackworld';
+}
+
+.img1{
+    background-image: url(../../images/img1.jpg);
+}
+
+.img2{
+    background-image: url(../../images/img2.jpg);
+}
+
+.img3{
+    background-image: url(../../images/img3.jpg);
+}
+
+/* best_menu (대표메뉴) 영역 */
+
+.best_menu{
+    max-width: 1200px;
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between; */
+    /* border: 5px groove lightgreen; */
+    margin: 20px auto;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.best_menu h2{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "BusanBada" ;
+}
+
+.best_list{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.best_list li{
+    width: 50px;
+    height: 30px;
+}
+.best_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 2px solid transparent;
+}
+
+.best_list li a.on{
+    border-bottom: 2px solid orange;
+}
+
+/* best_photo 영역 */
+
+.best_photo{
+    max-width: 1200px;
+    width: 100%;
+    height: 82%;
+    /* background-color: red; */
+}
+
+/* sashimi_img 영역 */
+.sashimi_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.sashimi_img li{
+    width: 33%;
+    height: 48%;
+    /* border: 1px solid black; */
+}
+
+.sashimi_img1{}
+
+.sashimi_img1 a{
+    display: block;
+    background-image: url("../img/고등어회.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+
+.sashimi_img1 a:hover{
+    filter: none;
+}
+
+
+.sashimi_img1 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: gold;
+    color: Navy;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sashimi_img1 a {}
+
+.sashimi_img1 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sashimi_img2{}
+.sashimi_img2 a{
+    display: block;
+    background-image: url("../img/광어회.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sashimi_img2 a:hover{
+    filter: none;
+}
+.sashimi_img2 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: silver;
+    color: Black;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sashimi_img2 a{}
+.sashimi_img2 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sashimi_img3{}
+.sashimi_img3 a{
+    display: block;
+    background-image: url("../img/농어회.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sashimi_img3 a:hover{
+    filter: none;
+}
+.sashimi_img3 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: #da8a67;
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sashimi_img3 a {}
+.sashimi_img3 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sashimi_img4{}
+.sashimi_img4 a{
+    display: block;
+    background-image: url("../img/연어회.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sashimi_img3 a:hover{
+    filter: none;
+}
+.sashimi_img4 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sashimi_img4 a{}
+.sashimi_img4 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sashimi_img5{}
+.sashimi_img5 a{
+    display: block;
+    background-image: url("../img/전복회.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sashimi_img5 a:hover{
+    filter: none;
+}
+.sashimi_img5 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sashimi_img5 a {}
+.sashimi_img5 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sashimi_img6{}
+.sashimi_img6 a{
+    display: block;
+    background-image: url("../img/참돔회.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sashimi_img6 a:hover{
+    filter: none;
+}
+.sashimi_img6 a{}
+.sashimi_img6 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sashimi_img6 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* sushi_img영역 */
+
+.sushi_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+
+.sushi_img1{
+    width: 49%;
+    height: 49%;
+    /* border: 1px solid black; */
+}
+.sushi_img1 a{
+    display: block;
+    background-image: url("../img/연어초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;    
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sushi_img1 a:hover{
+    filter: none;
+}
+.sushi_img1 a{}
+.sushi_img1 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: gold;
+    color: Navy;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sushi_img1 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sushi_img2{
+    width: 49%;
+    height: 49%;
+}
+.sushi_img2 a{
+    display: block;
+    background-image: url("../img/참치초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sushi_img2 a:hover{
+    filter: none;
+}
+.sushi_img2 a {}
+.sushi_img2 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: silver;
+    color: Black;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sushi_img2 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sushi_img3{
+    width: 49%;
+    height: 49%;
+}
+.sushi_img3 a{
+    display: block;
+    background-image: url("../img/새우초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sushi_img3 a:hover{
+    filter: none;
+}
+.sushi_img3 a{}
+.sushi_img3 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: #da8a67;
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sushi_img3 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sushi_img4{
+    width: 49%;
+    height: 49%;
+}
+.sushi_img4 a{
+    display: block;
+    background-image: url("../img/모둠초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.sushi_img4 a:hover{
+    filter: none;
+}
+.sushi_img4 a{}
+.sushi_img4 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.sushi_img4 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* roll_img 영역 */
+
+.roll_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.roll_img1{
+    width: 48%;
+    height: 48%;
+}
+.roll_img1 a{
+    display: block;
+    background-image: url("../img/연어롤초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.roll_img1 a:hover{
+    filter: none;
+}
+.roll_img1 a{}
+.roll_img1 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: gold;
+    color: Navy;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.roll_img1 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.roll_img2{
+    width: 48%;
+    height: 48%;
+}
+.roll_img2 a{
+    display: block;
+    background-image: url("../img/캘리포니아롤초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.roll_img2 a:hover{
+    filter: none;
+}
+.roll_img2 a{}
+.roll_img2 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: silver;
+    color: Black;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.roll_img2 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.roll_img3{
+    width: 48%;
+    height: 48%;
+}
+.roll_img3 a{
+    display: block;
+    background-image: url("../img/필라델피아롤초밥.png");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.roll_img3 a:hover{
+    filter: none;
+}
+.roll_img3 a {}
+.roll_img3 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: #da8a67;
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.roll_img3 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.roll_img4{
+    width: 48%;
+    height: 48%;
+}
+.roll_img4 a{
+    display: block;
+    background-image: url("../img/롤초밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.roll_img4 a:hover{
+    filter: none;
+}
+.roll_img4 a {}
+.roll_img4 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.roll_img4 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* rice_img 영역 */
+
+.rice_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.rice_img1{
+    width: 48%;
+    height: 48%;
+}
+.rice_img1 a{
+    display: block;
+    background-image: url("../img/장어덮밥.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.rice_img1 a:hover{
+    filter: none;
+}
+.rice_img1 a{}
+.rice_img1 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: gold;
+    color: Navy;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.rice_img1 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rice_img2{
+    width: 48%;
+    height: 48%;
+}
+.rice_img2 a{
+    display: block;
+    background-image: url("../img/매운탕.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.rice_img2 a:hover{
+    filter: none;
+}
+.rice_img2 a {}
+.rice_img2 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: silver;
+    color: Black;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.rice_img2 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rice_img3{
+    width: 48%;
+    height: 48%;
+}
+.rice_img3 a{
+    display: block;
+    background-image: url("../img/지리매운탕.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.rice_img3 a:hover{
+    filter: none;
+}
+.rice_img3 a{}
+.rice_img3 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: #da8a67;
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.rice_img3 a span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rice_img4{
+    width: 48%;
+    height: 48%;
+}
+.rice_img4 a{
+    display: block;
+    background-image: url("../img/규동.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.rice_img4 a:hover{
+    filter: none;
+}
+.rice_img4 a{}
+.rice_img4 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.rice_img4 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* shrimp_img 영역 */
+
+.shrimp_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.shrimp_img1{
+    width: 48%;
+    height: 48%;
+}
+.shrimp_img1 a{
+    display: block;
+    background-image: url("../img/생새우.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.shrimp_img1 a:hover{
+    filter: none;
+}
+.shrimp_img1 a{}
+.shrimp_img1 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: gold;
+    color: Navy;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.shrimp_img1 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.shrimp_img2{
+    width: 48%;
+    height: 48%;
+}
+.shrimp_img2 a{
+    display: block;
+    background-image: url("../img/소금새우구이.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.shrimp_img2 a:hover{
+    filter: none;
+}
+.shrimp_img2 a{}
+.shrimp_img2 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: silver;
+    color: Black;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.shrimp_img2 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.shrimp_img3{
+    width: 48%;
+    height: 48%;
+}
+.shrimp_img3 a{
+    display: block;
+    background-image: url("../img/버터새우구이.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.shrimp_img3 a:hover{
+    filter: none;
+}
+.shrimp_img3 a{}
+.shrimp_img3 a h3{    width: 120px;
+    /* height: 80px; */
+    background-color: #da8a67;
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;}
+.shrimp_img3 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.shrimp_img4{
+    width: 48%;
+    height: 48%;
+}
+.shrimp_img4 a{
+    display: block;
+    background-image: url("../img/새우칵테일.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.shrimp_img3 a:hover{
+    filter: none;
+}
+.shrimp_img4 a{}
+.shrimp_img4 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.shrimp_img4 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* fried 영역 */
+.fried{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.fried_img1{
+    width: 48%;
+    height: 48%;
+}
+.fried_img1 a{
+    display: block;
+    background-image: url("../img/가라아게.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.fried_img1 a:hover{
+    filter: none;
+}
+.fried_img1 a{}
+.fried_img1 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: gold;
+    color: Navy;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.fried_img1 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.fried_img2{
+    width: 48%;
+    height: 48%;
+}
+.fried_img2 a{
+    display: block;
+    background-image: url("../img/모둠튀김.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.fried_img2 a:hover{
+    filter: none;
+}
+.fried_img2 a{}
+.fried_img2 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: silver;
+    color: Black;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.fried_img2 a span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.fried_img3{
+    width: 48%;
+    height: 48%;
+}
+.fried_img3 a{
+    display: block;
+    background-image: url("../img/텐동.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.fried_img3 a:hover{
+    filter: none;
+}
+.fried_img3 a{}
+.fried_img3 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: #da8a67;
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.fried_img3 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.fried_img4{
+    width: 48%;
+    height: 48%;
+}
+.fried_img4 a{
+    display: block;
+    background-image: url("../img/새우튀김.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    filter:brightness(1.1);
+    transition: all 0.3s;
+}
+.fried_img4 a:hover{
+    filter: none;
+}
+.fried_img4 a{}
+.fried_img4 a h3{
+    width: 120px;
+    /* height: 80px; */
+    background-color: Navy;
+    color: White;
+    margin-left: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.fried_img4 a h3 span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* m_best_menu(모바일) */
+
+.m_best_menu{
+    margin-top: 30px;
+    width: 100%;
+    /* height: 500px; */
+    /* border: 1px solid blue; */
+    display: none;
+}
+.m_best_menu h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+.m_best_photo{
+    width: 100%;
+    /* height: 80%; */
+    /* border: 1px solid red; */
+}
+
+.m_best_photo li{
+    position: relative;
+    height: 100%;
+}
+
+.m_best_photo h3{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.m_best_photo .slick-slide{
+    overflow: hidden;
+    height: 100%;
+
+}
+
+.m_best_photo li{}
+.m_best_photo .slick-slide a{
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+.m_best_photo .slick-slide img{
+    width: 100%;
+}
+
+/* img_slide2 (갤러리) 영역 */
+
+.img_slide2{
+    width: 100%;
+    /* border: 1px solid red; */
+    /* height: 500px; */
+}
+.slide2_img{}
+.slide2_img h2{
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 40px;
+    font-family: "BusanBada" ;
+}
+.slide2{
+    height: 500px;
+    /* border: 1px solid black; */
+}
+
+.slide2 li{
+    position: relative;
+    height: 500px;
+    /* border: 1px solid red; */
+}
+
+.slide2 li a{
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid hotpink; */
+    text-indent: -9999px;
+}
+
+.slide2 li h3{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.mood_1{background-image: url("../img/분위기1.jpg");}
+.mood_2{background-image: url("../img/분위기2.jpg");}
+.mood_3{background-image: url("../img/분위기3.jpg");}
+.mood_4{background-image: url("../img/단체석1.jpg");}
+
+
+/* notice 영역 */
+.notice{
+    max-width:1200px;
+    width: 100%;
+    margin: 0 auto;
+     /* border: 1px solid blue; */
+    background-color: rgba(235, 235, 235, 0.5);
+    }
+
+.notice h2{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "BusanBada" ;
+}
+
+.info{
+    max-width: 1200px;
+    width: 100%;
+    /* height: 800px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.map{
+    /* border: 1px solid blue; */
+}
+
+.address{
+    width: 50%;
+    /* height: 450px; */
+    padding: 50px;
+    /* border: 1px solid red; */
+    background-color: white;
+}
+
+.address h2{
+    font-size: 50px;
+}
+
+.add{display: flex;align-items: center;}
+.add h3{}
+.add h3 a{}
+.add span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/위치.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    /* border: 1px solid red; */
+}
+
+.tel{margin: 80px 0; display: flex;align-items: center;}
+.tel h3{}
+.tel h3 a{}
+.tel span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/전화.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+.reservation{}
+.reservation div{}
+.reservation div ul{
+    display: flex;
+    justify-content: space-between;
+}
+.reservation div ul li{
+    display: flex;
+    align-items: center;
+}
+.reservation div ul li span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.reservation div ul li a{}
+
+.icon_1{background-image: url("../img/예약하기.png");}
+.icon_2{background-image: url("../img/예약확인.png");}
+.icon_3{background-image: url("../img/예약취소.png");}
+
+#footer{
+    /* max-width: 1200px; */
+    width: 100%;
+    background-color: #333;
+    /* margin-top: 40px; */
+}
+
+
+.foot_inner{
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: #333; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_info{
+    max-width: 1200px;
+    width: 47%;
+    /* background-color: white; */
+    align-content: center;
+    border-right: 1px dotted gray;
+}
+
+.foot_info span{
+    display: block;
+    /* text-align: center; */
+    line-height: 1.5;
+    font-size: 12px;
+    font-family: "돋움";
+    color: white;
+}
+
+.foot_info span p{color: azure;}
+
+.foot_sns{
+    max-width: 1200px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.foot_sns a{
+    display: block;
+    text-indent: -9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+.sns_ins{background-image: url("../img/인스타.png");}
+.sns_fa{background-image: url("../img/페이스북.png");}
+.sns_kakao{background-image: url("../img/카카오.png");}
+.sns_line{background-image: url("../img/라인.png");}

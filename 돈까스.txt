@@ -1,0 +1,44 @@
+
+.img_slide2{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid red;
+
+}
+
+.slide2_img{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.slide2_img h2{
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 0;
+    font-family: "BusanBada" ;
+}
+
+.slide2{
+    width: 100%;
+    height: 65%;
+    border: 1px solid hotpink;
+}
+
+.slide2 li{
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide2 li a{
+    text-indent: -9999px;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.slide2 li.mood_1{background-image:url(../img/분위기1.jpg);}
+.slide2 li.mood_2{background-image:url(../img/분위기2.jpg);}
+.slide2 li.mood_3{background-image:url(../img/분위기3.jpg);}
+.slide2 li.mood_4{background-image:url(../img/단체석1.jpg);}
