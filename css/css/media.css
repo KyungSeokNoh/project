@@ -223,8 +223,6 @@
 
     .foot_inner {
         flex-direction: column;
-        width: 430px;
-        margin: 0 auto;
     }
 
     .foot_info {
