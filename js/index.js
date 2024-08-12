@@ -78,4 +78,8 @@ $(function(){
         $('.best_photo ul').eq(n).css({display:"flex"});
     })
 
+    $(".close").click(function(){
+        $(".pop").hide();
+    })
+
 })
