@@ -1534,7 +1534,7 @@ html,body{}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .foot_sns a{
